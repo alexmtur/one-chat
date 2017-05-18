@@ -1,0 +1,77 @@
+<!-- Execute polymer serve on the file's folder and open http://localhost:8080/components/one-chat/test.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- <script src="https://polygit2.appspot.com/components/webcomponentsjs/webcomponents-lite.js"></script> -->
+
+<!-- <link rel="import"  href="https://polygit2.appspot.com/components/polymer/polymer.html"> -->
+<link rel="import"  href="one-chat.html">
+<link rel="import"  href="one-message.html">
+<style is="custom-style">
+  :root {
+   --one-shadow-color: green;
+   --one-shadow-blur: blur(20px);
+  }
+</style>
+</head>
+<body>
+  
+  <style>
+    #container {
+      width: 70vw;
+      height: 70vh;
+      border: 1px solid black;
+      display: flex;
+    }
+
+
+  </style>
+  <script type="text/javascript">
+  //   var chorizo = {
+  //       "message": "val1",
+  //       "option_2": "val2",
+  //       "timestamp": true,
+  //       "allow_that": false
+  //   }
+  //   document.addEventListener('polymer-ready', function() {
+  //     document.querySelector('myshe').data = {
+  //       "message": "val1",
+  //       "option_2": "val2",
+  //       "timestamp": true,
+  //       "allow_that": false
+  //   };
+  //   });
+  //    var t = document.querySelector('#myshe');
+
+  // // The dom-change event signifies when the template has stamped its DOM.
+  // t.addEventListener('dom-ready', function() {
+  //   t.data = {
+  //       "message": "val1",
+  //       "option_2": "val2",
+  //       "timestamp": true,
+  //       "allow_that": false
+  //   };
+  //   // auto-binding template is ready.
+  // });
+  </script>
+
+  <div id="container">
+<!--     <template id="t" is="dom-bind">
+
+    <one-message id='myshe' data="{{chorizo}}">
+    </one-message>
+
+  </template>
+     -->
+    <one-chat>
+    </one-chat>
+  </div>
+
+  
+</body>
+</html>
+
+
+
+

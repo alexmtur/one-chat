@@ -1,0 +1,27 @@
+{
+  "name": "one-style",
+  "homepage": "https://github.com/alexmtur/one-elements",
+  "authors": [
+    "Alex Martin <alexmartinturrillas@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "1.0.10",
+  "_release": "1.0.10",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.10",
+    "commit": "d376d1974db029ea35df15ab12dbca38e82877af"
+  },
+  "_source": "https://github.com/alexmtur/one-style.git",
+  "_target": "*",
+  "_originalSource": "one-style"
+}

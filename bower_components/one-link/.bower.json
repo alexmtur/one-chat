@@ -1,0 +1,32 @@
+{
+  "name": "one-link",
+  "homepage": "https://github.com/alexmtur/one-link",
+  "authors": [
+    "Alex Martin <alexmartinturrillas@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#latest",
+    "app-route": "polymerelements/app-route#latest"
+  },
+  "devDependencies": {},
+  "version": "1.0.10",
+  "_release": "1.0.10",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.10",
+    "commit": "103005da96f0ae50515f9725810fcb82b72cbb7a"
+  },
+  "_source": "https://github.com/alexmtur/one-link.git",
+  "_target": "*",
+  "_originalSource": "one-link"
+}

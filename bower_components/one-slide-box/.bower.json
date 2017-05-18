@@ -1,0 +1,13 @@
+{
+  "name": "one-slide-box",
+  "homepage": "https://github.com/alexmtur/one-slide-box",
+  "_release": "c26fca293e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c26fca293e4d6094274466fa514e430ca52afe0e"
+  },
+  "_source": "https://github.com/alexmtur/one-slide-box.git",
+  "_target": "*",
+  "_originalSource": "one-slide-box"
+}

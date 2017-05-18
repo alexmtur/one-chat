@@ -1,0 +1,126 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../one-message/one-message.html">
+<link rel="import" href="../app-storage/app-indexeddb-mirror.html">
+<link rel="import" href="../polymerfire/firebase-app.html">
+<link rel="import" href="../polymerfire/firebase-auth-script.html">
+<link rel="import" href="../polymerfire/firebase-database-script.html">
+<link rel="import" href="../polymerfire/firebase-storage-script.html">
+<link rel="import" href="../polymerfire/firebase-messaging-script.html">
+<dom-module id="one-chat">
+    <!-- <firebase-query
+    id="query"
+    app-name="notes"
+    path="/notes/[[uid]]"
+    data="{{data}}">
+    </firebase-query> -->
+    <firebase-document
+        location="/chats/{{chatId}}"
+        data="{{chat}}">
+    </firebase-document>
+    <app-indexeddb-mirror
+        key="{{chatId}}"
+        data="{{chat}}"
+        persisted-data="{{offlineChat}}">
+    </app-indexeddb-mirror>
+    <!-- Database structure for chats: there is a conversations document and a user document, and the user has a conversation id to fetdh the conversations -->.
+    <template>
+        <style>
+            :host {
+                display: block;
+                border: 1px solid black;
+            }
+            #header {
+                height: 40px;
+                background: green;
+
+            }
+            #content {
+                height: 500px;
+                overflow-y: scroll;
+                /*background*/: grey;
+
+            }
+            #footer {
+                height: 40px;
+                background: green;
+            }
+        </style>
+        <div>
+            <div id="header">
+
+            </div>
+            <div id="content">
+            <template is="dom-repeat" items="{{messages}}" as="message">
+                <!-- <p>jipoj{{message}}</p> -->
+                <div>{{message}}</div>
+                <!-- <one-message data="{{message}}"></one-message> -->
+            </template>
+            <template is="dom-repeat" items="{{offlineChat.messages}}">
+        <div># <span>{{index}}</span></div>
+        <div>First name: <span>{{item.first}}</span></div>
+        <div>Last name: <span>{{item.last}}</span></div>
+    </template>
+          
+        </div>
+
+            <div id="footer">
+                <input type="text" value="{{text::input}}">
+                <button on-tap="send">Send</button>
+
+            </div>
+        </div>
+        
+
+
+    </template>
+  
+
+    
+
+  <script>
+  Polymer({
+    is: "one-chat",
+    properties: {
+        uid: String,
+        data: {
+            type: Object,
+            observer: 'dataChanged'
+        },
+        chatId: String,
+        chat: Object,
+        myUserId: String,
+        profilePath: String,
+        profile: Object,
+        text: String,
+        offlineChat: {type: Object, value: {}},
+
+
+        //history on-off, handle push notifications
+    },
+    ready: function () {
+        if(this.offlineChat.messages && this.offlineChat.messages.lenght) 
+            this.messages = this.offlineChat.messages;
+        else
+            this.messages = [];
+
+        //Check for my user Id if I am logged on: 
+        // do something when the query returns values
+    },
+    send: function () {
+        // console.log(this.text);
+        // this.offlineChat.messages.push(this.text);
+        // console.log(this.offlineChat.messages);
+        // this.messages.push(this.text);
+        this.push('messages', this.text);
+        console.log(this.messages);
+        this.text = '';
+        //Check for my user Id if I am logged on: 
+        // do something when the query returns values
+    },
+
+    dataChanged: function (newData, oldData) {
+        // do something when the query returns values
+    },
+  });
+</script>
+</dom-module>

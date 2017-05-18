@@ -1,0 +1,34 @@
+{
+  "name": "one-navbar",
+  "homepage": "https://github.com/alexmtur/one-navbar",
+  "authors": [
+    "Alex Martin <alexmartinturrillas@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#latest",
+    "app-route": "polymerelements/app-route#latest",
+    "iron-icon": "polymerelements/iron-icon#latest",
+    "one-link": "latest"
+  },
+  "devDependencies": {},
+  "version": "1.0.10",
+  "_release": "1.0.10",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.10",
+    "commit": "ad4cc73fd72205740ce3390a7bb1e7b39d1e04c6"
+  },
+  "_source": "https://github.com/alexmtur/one-navbar.git",
+  "_target": "*",
+  "_originalSource": "one-navbar"
+}

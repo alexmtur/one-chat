@@ -1,0 +1,61 @@
+<link rel="import" href="../polymer/polymer.html">
+<dom-module id="one-message">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+            #bubble {
+                padding: 10px;
+                background: lightgreen;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                flex-direction: column;
+                max-width: 400px;
+            }
+            #triangle {
+                content: "";
+                background: transparent;
+                width: 0;
+                height: 0;
+                border: 5px solid transparent;
+                border-left: lightgreen 10px solid;
+            }
+            #timestamp {
+                font-size: 12px;
+                color: white;
+                font-weight: bold;
+                width: 100%;
+                /*background: blue;*/
+                display: inline-block;
+                text-align: right;
+            }
+        </style>
+        <div id="container">
+            <div id="triangle"></div>
+            <div id="bubble">
+                <p>{{data.message}}</p>
+                <div>{{data.timestamp}}</div>
+            </div>
+            <div id="triangle"></div>
+        </div>
+    </template>
+    <script>
+    Polymer({
+        is: "one-message",
+        properties: {
+            data: {
+                type: Object,
+                observer: 'dataChanged'
+            },
+            //history on-off, handle push notifications
+        },
+
+        dataChanged: function (newData, oldData) {
+            // do something when the query returns values
+        }
+      });
+    </script>
+</dom-module>
